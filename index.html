@@ -8,14 +8,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="weather-containeer">
-        <img class="icon">
-        <input id="city" placeholder="Type a city">
-        <button>Rechercher</button>
-        <p id="weather"></p>
-        <p id="temp"></p>
-        <script src="script.js"></script>    
+    <div class="container">
+            <h1 id="title">WeatherInfo</h1>
+            <p>Pour savoir la météo actuelle écrivez ci-dessous :</p>
+            <input id="input" placeholder="Saisir un nom de ville">
+            <button id="button">Rechercher</button>
+            <div class="block">
+                <div class="inline-content">
+                    <p id="ville"></p> 
+                    <a href="#title">Retour en haut de la page</a>
+                </div>   
+                <p id="weather"></p>
+                <p id="temp"></p>
+            </div>
+        
+        </div>
+    <script src="script.js"></script>    
 
-    </div>
 </body>
 </html>
