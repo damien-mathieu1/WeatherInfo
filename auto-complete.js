@@ -7,12 +7,7 @@ const acdiv = document.getElementById('autocompletion');
 
 //fetch json file with city name and put it in cities var
 const searchCity = async searchText => {
-  if (search.value==''){
-    acdiv.style.borderWidth='0px';
-  }
-  else{
-    acdiv.style.borderWidth='1px';
-  }
+  clearDiv();
   const res = await fetch('../cities.json');
   const cities = await res.json();
   //get match to input
@@ -20,16 +15,17 @@ const searchCity = async searchText => {
     const regex = new RegExp(`^${searchText}`,'gi');
     return cities.name.match(regex);
   }); 
-  clearDiv();
   for (let i=0; i<5;i++){
     let ville = document.createElement('p');
     ville.innerText=matches[i].name;
     acdiv.appendChild(ville);
-    
+  } 
+  if (search.value==''){
+    acdiv.style.borderWidth='0px';
+    clearDiv();
   }
-  console.log(matches);
-  if (searchText.lenght === 0){
-    matches = [];
+  else{
+    acdiv.style.borderWidth='1px';
   }
 };
 
