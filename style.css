@@ -61,7 +61,7 @@ body {
     text-align: center;
     padding:15px 10px;
     line-height:140%;
-    margin-bottom: 3%;
+
     border-radius: 40px;
     border: 2px solid rgb(0, 162, 255);
 
@@ -69,6 +69,7 @@ body {
 }
 
 .container #button {
+    margin-top: 2%;
     padding:10px 10px;
     border-radius: 10px;
     background-color: white;
@@ -76,8 +77,7 @@ body {
     border: 2px solid rgb(0, 162, 255);
     cursor: pointer;
     overflow: hidden;
-    margin-bottom: 70%;
-    
+    margin-bottom: 15%;    
 }
 
 .container #button:hover{
@@ -131,6 +131,32 @@ body {
 
 }
 
+.acdiv {
+    display:flex;
+    flex-direction: column;    
+    width : 100%;
+    align-items: center;
+}
 
- 
+.acdiv *{
+    vertical-align: top;
+}
+
+#autocompletion{
+    width: 25%;
+    background-color: white;
+    border: 0px solid grey;
+    line-height:1.5;
+}
+
+#autocompletion p {
+    margin: 0 0 0 0;
+    padding: 0 5px 0 5px;
+}
+
+#autocompletion p:hover {
+    background-color:aliceblue;
+    cursor:default;
+}
+
 

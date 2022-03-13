@@ -1,5 +1,6 @@
 
 var input = document.getElementById("input");
+const divMeteo = document.getElementById('divMeteo');
 
 input.addEventListener("keyup", function(event){
   if (event.keyCode === 13) {
@@ -10,6 +11,7 @@ input.addEventListener("keyup", function(event){
 
 
 button.onclick= async function getWeatherInfo(){
+    divMeteo.removeAttribute('hidden');
     ville= document.getElementById("input").value;
     api_url = "http://api.openweathermap.org/data/2.5/weather?q="+ville+"&units=metric&lang=fr&appid=13a6b0a5726c35c06b87cc719ded487e";
     const response = await fetch(api_url);

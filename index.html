@@ -12,10 +12,12 @@
     <div class="container">
             <h1 id="title">WeatherInfo</h1>
             <p id="subtitle">Pour savoir la météo actuelle écrivez ci-dessous :</p>
-            <input id="input" placeholder="Saisir un nom de ville" autocomplete="home city"/>
-            <div id="match-list"></div>
+            <div class="acdiv">
+                <input id="input" placeholder="Saisir un nom de ville" autocomplete="home city"/>
+                <div id="autocompletion"></div>
+            </div>                
             <button id="button">Rechercher</button>
-            <div class="block" >
+            <div class="block" id="divMeteo" hidden>
                 <div class="inline-content">
                     <p id="ville"></p> 
                     <p id="meteo">Météo actuelle</p>
