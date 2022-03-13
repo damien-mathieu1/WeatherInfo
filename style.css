@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:800&display=swap');
 
 html{
     scroll-behavior: smooth;
@@ -9,6 +10,7 @@ body {
     margin: 0;
     width: 100%;
     height: 100%;
+    font-family : 'Fredoka', sans-serif;
 }
 
 .container {
@@ -22,11 +24,33 @@ body {
 }
 
 #title {
-    font-size: 50px;
-    margin-bottom: 5%;
+		color: #fff;
+        font-size: 70px;
+		text-transform: uppercase;
+        -webkit-text-stroke: 2px black;
+		font-weight: 700;
+		font-family: "Josefin Sans", sans-serif;
+		background: linear-gradient(to right,#095fab 10%, #25abe8 50%, #57d75b 60%);
+		background-size: auto auto;
+		background-clip: border-box;
+		background-size: 200% auto;
+		color: #fff;
+		background-clip: text;
+		text-emphasis-color: transparent;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: textclip 3s linear infinite;
+		display: inline-block;
+	}
+
+
+@keyframes textclip {
+	to {
+		background-position: 200% center;
+	}
 }
 
-.container p{
+.container #subtitle{
     font-size: 20px;
     margin-bottom: 3%;
 }
@@ -62,7 +86,13 @@ body {
 }
 
 .block {
-    width: 90%;
+    width: 60%;
+    border : 1px solid black;
+    margin-bottom: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 30px;
+
 }
 
 .block #ville {
@@ -74,13 +104,26 @@ body {
 
 
 .block #weather {
-    margin-bottom: 0%;
+    text-align: start;
+    font-size: 20px;
+    margin-top: 0;  
+    margin-bottom: 40px;
 }
-
 
 .block #temp {
-    margin-bottom: 10%;
+    text-align: start;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    margin-left: 40px;
 }
+
+#meteo {
+    font-size: 25px;
+
+}
+
+
 
 .inline-content {
     display : flex;

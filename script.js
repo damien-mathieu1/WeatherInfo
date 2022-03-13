@@ -14,13 +14,15 @@ button.onclick= async function getWeatherInfo(){
     api_url = "http://api.openweathermap.org/data/2.5/weather?q="+ville+"&units=metric&lang=fr&appid=13a6b0a5726c35c06b87cc719ded487e";
     const response = await fetch(api_url);
     const data = await response.json();
+    const description =data.weather[0].description.charAt(0).toUpperCase()+data.weather[0].description.slice(1);
     console.log(data);
     document.getElementById('ville').textContent=data.name+" : ";
-    document.getElementById('weather').textContent="Le temps est : "+data.weather[0].description;
-    document.getElementById('temp').textContent=data.main.temp+" degrès";
+    document.getElementById('weather').textContent=description;
+    document.getElementById('temp').textContent=data.main.temp+"°";
     document.getElementById("weather").scrollIntoView({
       behavior: "smooth"
   });
+
 
 }
 
