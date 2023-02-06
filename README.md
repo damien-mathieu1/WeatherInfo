@@ -1,10 +1,6 @@
-### WeatherInfo
-## Web application that'll fetch information about the weather in the city you will chose
--Display the description of the weather
--Display the temps also
+# WeatherInfo
+--------
+### Contexte
+--------
+Ce projet est un projet personnel, je voulais apprendre comment fonctionnait le javascript et les API. Pour savoir la météo dans la ville que l'on souhaite il suffit de rentrer la ville voulue dans l'input utilisateur
 
-#content{
-  background-image: linear-gradient(to bottom, rgba(128, 255, 170, 0.5),rgba(0,0,128,0.5));
-  flex-basis : 100%;
-
-}
